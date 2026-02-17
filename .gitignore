@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 bot.log
 *.log
+.env
+!.env.example
+venv/
+.venv/

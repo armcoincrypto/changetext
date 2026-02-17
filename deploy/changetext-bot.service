@@ -1,0 +1,17 @@
+[Unit]
+Description=Telegram Text Formatter Bot (changetext)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/changetext
+EnvironmentFile=/opt/changetext/.env
+ExecStart=/usr/bin/python3 /opt/changetext/bot.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
